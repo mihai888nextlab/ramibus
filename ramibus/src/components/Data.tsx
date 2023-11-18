@@ -1,35 +1,9 @@
-import mysql, { Connection, MysqlError } from "mysql";
-import express, { Express, Request, Response } from "express";
-
 function Data() {
-  console.log("start");
-  const app: Express = express();
-
-  const dbConfig: Connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "Nextlab888!",
-    database: "ramibus",
-    port: 3306,
-  });
-
-  console.log(dbConfig);
-
-  dbConfig.query("SHOW TABLES;", (err: MysqlError | null, result: any) => {
-    if (err) {
-      return "error";
-    } else {
-      return "connected";
-    }
-  });
-
-  app.use(express.json());
-
-  app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-  });
-
-  return "connected";
-
+  let data = {
+    "M11 - Timisoara - Ghiroda": 2,
+    "M14 - Timisoara - Dumbravita": 1,
+    "M22 - Timisoara - Mosnita": 3,
+  };
+}
 
 export default Data;

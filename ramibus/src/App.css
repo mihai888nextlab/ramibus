@@ -58,8 +58,6 @@
     top: 5vh;
     border-radius: 40px;
 
-    display: flex;
-    justify-content: space-between;
     padding-top: 10px;
     padding-right: 15px;
 }
@@ -71,4 +69,9 @@
 
 .menu h2 {
     margin-left: 30px;
+}
+
+.menu div {
+    display: flex;
+    justify-content: space-between;
 }

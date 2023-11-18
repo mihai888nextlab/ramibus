@@ -1,6 +1,4 @@
 import imgToAdd from "../assets/cross.png";
-import { getVehicles } from "./vehicleService";
-import axios from "axios";
 
 interface Props {
   onMenuClose: () => void;
@@ -8,16 +6,17 @@ interface Props {
 }
 
 function Menu({ onMenuClose, title }: Props) {
-  //let v = Array(getVehicles());
-
-  Promise.all([axios.get("/ramibus/vehicle.php")]).then(function (values) {
-    console.log(values);
-  });
-
+  let trafic = Math.floor(Math.random() * 11);
   return (
     <div className="menu">
-      <h2>{title}</h2>
-      <img onClick={onMenuClose} className="cross" src={imgToAdd} alt="" />
+      <div>
+        <h2>{title}</h2>
+        <img onClick={onMenuClose} className="cross" src={imgToAdd} alt="" />
+      </div>
+      <h3>Bus hazards</h3>
+      <ul>
+        <li>Traffic level: {trafic}</li>
+      </ul>
     </div>
   );
 }

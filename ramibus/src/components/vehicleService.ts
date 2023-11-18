@@ -6,7 +6,7 @@ module.exports = function(app) {
     app.use(
       '/ramibus/vehicle.php',
       createProxyMiddleware({
-        target: 'http://localhost:80/ramibus/vehicle.php',
+        target: 'http://localhost:80/ramibs/vehicle.php',
         changeOrigin: true,
       })
     );
