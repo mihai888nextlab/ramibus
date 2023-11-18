@@ -45,6 +45,7 @@
     text-decoration: none;
     list-style-type: none;
     text-align: center;
+    cursor: pointer;
 }
 
 .menu {
@@ -55,4 +56,18 @@
     height: 90vh;
     top: 5vh;
     border-radius: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-right: 15px;
+}
+
+.cross{
+    height: 50px;
+    cursor: pointer;
+}
+
+.menu h2 {
+    margin-left: 30px;
 }

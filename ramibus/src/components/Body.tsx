@@ -64,6 +64,7 @@ function Body() {
     "8 (tram)",
     "9 (tram)",
   ];
+
   return (
     <>
       <div className="body">
