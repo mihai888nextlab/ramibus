@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <h1>Ceva</h1>
     <App />
   </React.StrictMode>
 );
