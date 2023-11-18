@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import React, { useEffect } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
     <>
       <Header></Header>
       <Body></Body>
+      <Footer></Footer>
     </>
   );
 }

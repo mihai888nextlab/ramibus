@@ -65,12 +65,49 @@ function Body() {
     "9 (tram)",
   ];
 
+  let descMetropolitane = [
+    "The M11 bus goes from Timisoara to Ghiroda, and it's beautifull!",
+    "M14 - Timisoara - Dumbravita",
+    "M22 - Timisoara - Mosnita",
+    "M27 - Timisoara - Ianova",
+    "M29 - Timisoara - Ghiroda",
+    "M30 - Bastion - Ghiroda",
+    "M35 - Timisoara - Giarmata Vii",
+    "M36 - Timisoara - Smnh. Roman",
+    "M37 - Timisoara - Parta",
+    "M38 - Timisoara - Jebel/Cruceni",
+    "M41 - Timisoara - Carani",
+    "M42 - Timisoara - Covaci",
+    "M43 - Timisoara - Beregsau Mic",
+    "M44 - Timisoara - Dudesti",
+    "M45 - Timisoara - Dumbravita",
+    "M46 - Timisoara - Sag",
+    "M47 - Timisoara - Hodoni",
+    "M48 - Timisoara - Seceani",
+    "M49 - Timisoara - Giarmata",
+    "M50 - Timisoara - Sandra",
+    "M51 - Timisoara - Padureni",
+    "M52 - Timisoara - Varias",
+  ];
+
+  let descUrbane = [];
+
+  let descTramvaie = [];
+
   return (
     <>
       <div className="body">
-        <Colon title="Metropolitan Lines" auto={metropolitane}></Colon>
-        <Colon title="Urban Lines" auto={urbane}></Colon>
-        <Colon title="Trams and Trolleybuses" auto={tramvaie}></Colon>
+        <Colon
+          desc={descMetropolitane}
+          title="Metropolitan Lines"
+          auto={metropolitane}
+        ></Colon>
+        <Colon desc={descUrbane} title="Urban Lines" auto={urbane}></Colon>
+        <Colon
+          desc={descTramvaie}
+          title="Trams and Trolleybuses"
+          auto={tramvaie}
+        ></Colon>
       </div>
     </>
   );
