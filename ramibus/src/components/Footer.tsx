@@ -1,3 +1,5 @@
+import logo from "../assets/logo2.png";
+
 function Footer() {
   return (
     <div className="footer">
@@ -20,6 +22,10 @@ function Footer() {
           <h3>gorunescu.mihai@moisiltm.ro</h3>
           <h3>raduproman@gmail.com</h3>
         </div>
+      </div>
+
+      <div className="img-flex">
+        <img src={logo} alt="" />
       </div>
     </div>
   );

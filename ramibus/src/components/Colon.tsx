@@ -5,11 +5,13 @@ interface Props {
   title: string;
   auto: string[];
   desc: string[];
+  imgs: string[];
 }
 
-function Colon({ title, auto, desc }: Props) {
+function Colon({ title, auto, desc, imgs }: Props) {
   const [menuShow, menuShowFct] = useState("");
   const [descShow, descShowfct] = useState("");
+  const [imgShow, imgShowfct] = useState("");
   return (
     <>
       <div className="colon">
@@ -20,6 +22,7 @@ function Colon({ title, auto, desc }: Props) {
               onClick={() => {
                 menuShowFct(item);
                 descShowfct(desc[index]);
+                imgShowfct(imgs[index]);
               }}
               key={item}
             >
@@ -33,6 +36,7 @@ function Colon({ title, auto, desc }: Props) {
         <Menu
           desc={descShow}
           title={menuShow}
+          img={imgShow}
           onMenuClose={() => menuShowFct("")}
         ></Menu>
       )}

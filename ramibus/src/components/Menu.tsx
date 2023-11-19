@@ -6,13 +6,19 @@ import repairmentImg from "../assets/icoons/repairment.png";
 import axios from "axios";
 import { useState } from "react";
 
+import metropolitane from "../assets/poze_autobuz/metropolitane.jpg";
+import urbane from "../assets/poze_autobuz/urbane.jpg";
+import firobuze from "../assets/poze_autobuz/firobuze.jpg";
+import tramvaie from "../assets/poze_autobuz/tramvaie.jpg";
+
 interface Props {
   onMenuClose: () => void;
   title: string;
   desc: string;
+  img: string;
 }
 
-function Menu({ onMenuClose, title, desc }: Props) {
+function Menu({ onMenuClose, title, desc, img }: Props) {
   const [traficShow, traficFct] = useState(0);
   const [driverShow, driverFct] = useState(0);
   const [programShow, programFct] = useState(0);
@@ -43,6 +49,18 @@ function Menu({ onMenuClose, title, desc }: Props) {
 
       <div className="bodyMenu">
         <div className="leftMenu">
+          <img
+            src={
+              img == "metropolitane"
+                ? metropolitane
+                : img == "urbane"
+                ? urbane
+                : img == "firobuze"
+                ? firobuze
+                : tramvaie
+            }
+            alt=""
+          />
           <p>{desc}</p>
         </div>
 
@@ -131,13 +149,12 @@ function Menu({ onMenuClose, title, desc }: Props) {
               </button>
             </ul>
           </div>
-
-          <h3 className="over">
-            Overall score: {overShow}
-            /100
-          </h3>
         </div>
       </div>
+      <h3 className="over">
+        Overall score: {overShow}
+        /100
+      </h3>
     </div>
   );
 }

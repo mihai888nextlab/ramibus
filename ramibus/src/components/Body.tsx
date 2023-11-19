@@ -110,11 +110,9 @@ function Body() {
     "E6 connects Oituz with PITT",
     "E7 connects T.Grozavescu with Comtim",
     "E8 connects Scoala Plopi with Pod C. Sagului",
-    
   ];
 
   let descTramvaie = [
-
     "11 is a trolleybus that has the same route as M11 but doesn't enter Ghiroda.",
     "14 is the most popular trolleybus, everyone uses it to go from Ion Ionescu to Gara de Nord",
     "15 is a trolleybus that goes through Timisoara",
@@ -131,6 +129,70 @@ function Body() {
     "9 is a preety old tram that needs reconditioning ",
   ];
 
+  let metropolitaneImg = [
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+    "metropolitane",
+  ];
+
+  let urbaneImg = [
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+    "urbane",
+  ];
+
+  let tramvaieImg = [
+    "firobuze",
+    "firobuze",
+    "firobuze",
+    "firobuze",
+    "firobuze",
+    "firobuze",
+    "tramvaie",
+    "tramvaie",
+    "tramvaie",
+    "tramvaie",
+    "tramvaie",
+    "tramvaie",
+    "tramvaie",
+    "tramvaie",
+  ];
+
   return (
     <>
       <div className="body">
@@ -138,12 +200,19 @@ function Body() {
           desc={descMetropolitane}
           title="Metropolitan Lines"
           auto={metropolitane}
+          imgs={metropolitaneImg}
         ></Colon>
-        <Colon desc={descUrbane} title="Urban Lines" auto={urbane}></Colon>
+        <Colon
+          desc={descUrbane}
+          title="Urban Lines"
+          auto={urbane}
+          imgs={urbaneImg}
+        ></Colon>
         <Colon
           desc={descTramvaie}
           title="Trams and Trolleybuses"
           auto={tramvaie}
+          imgs={tramvaieImg}
         ></Colon>
       </div>
     </>
